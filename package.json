@@ -1,0 +1,30 @@
+{
+  "name": "bridge-server",
+  "version": "0.0.1",
+  "description": "A bridge between Dialogflow and web services",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test speciﬁed\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotobuki/Hardware-Sketching-Workshop-in-Taipei.git"
+  },
+  "keywords": [
+    "Dialogflow",
+    "IFTTT",
+    "OpenWeatherMap"
+  ],
+  "author": "Shigeru Kobayashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kotobuki/Hardware-Sketching-Workshop-in-Taipei/issues"
+  },
+  "homepage": "https://github.com/kotobuki/Hardware-Sketching-Workshop-in-Taipei#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
