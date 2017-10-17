@@ -2,17 +2,27 @@
 
 ## What is Dialogflow?
 
-* A service that enables you to build engaging voice and text-based conversational interfaces powered by AI.
-* By providing examples of what a user might say when interacting, analyze and understand the user's intent.
-* Can be easily combined with popular touchpoints such as Google Assistant, Slack, and Facebook Messenger.
+- A service that enables you to build engaging voice and text-based conversational interfaces powered by AI.
+- By providing examples of what a user might say when interacting, analyze and understand the user's intent.
+- Can be easily combined with popular touchpoints such as Google Assistant, Slack, and Facebook Messenger.
 
 ## Basic concepts
 
-* **Agents** are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.
-* **Intents** are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.
-* **Entities** are powerful tools used for extracting parameter values from natural language inputs.
+- **Agents** are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.
+- **Intents** are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.
+- **Entities** are powerful tools used for extracting parameter values from natural language inputs.
 
 ## Let's Make Your First Agent
+
+### What You Need
+
+- Google account: 1
+- PC: 1
+- iOS or Android device: 1
+- Google Assistant app: 1
+- MESH app: 1
+- MESH LED Tag: 1
+- Bridge Server: 1
 
 ### The First Step
 
@@ -25,7 +35,7 @@
 7. Choose `Default Welcome Intent`
 8. Give a few examples to `User says` (e.g. 'Hi', 'Hello', 'Howdy')
 9. Press `SAVE` and wait for a while till `Agent training completed` appers on the bottom right of the console
-10. Pick a phrase similar to what you gace to `User says`, type in the pharse to `Try it now` field on the upper right of the console and see what happnes
+10. Pick a phrase similar to what you gave to `User says`, type in the phrase to `Try it now` field on the upper right of the console and see what happens
 
 Congratulations! You were able to create the first (simple) agent. This agent works on the following system which consists of a local web browser and a web service on the Internet.
 
@@ -60,12 +70,12 @@ note right: Show the response
 1. Click on `Small Talk` in the left navigation and click on `Enable` to enable small talk
 2. Clink on `About agent` and pick a topic (e.g. `About agent`)
 3. Give answers to questions
-4. Press `SAVE` and try by typing pharses to `Try it now` field
+4. Press `SAVE` and try by typing phrases to `Try it now` field
 
-### Your First Agent with Google Assitant
+### Your First Agent with Google Assistant
 
 1. Click on `Integrations` in the left navigation
-2. Clcik on `Google Assitant` and click on the toggle on the top right
+2. Click on `Google Assistant` and click on the toggle on the top right
 3. Press `AUTHORIZE`, choose your account and allow dialogflow.com to 'View and manage your Google Assistant voice commands, dialog and grammar'
 3. Press `UPDATE DRAFT` to update your Actions on Google draft with your Dialogflow configuration
 4. Press `VISIT CONSOLE` to visit the Actions on Google console
@@ -75,8 +85,8 @@ note right: Show the response
 ` and press `DONE`
 8. Type `Talk to my test app` in the simulator
 9. Type questions to test
-10. Launch the Google Assitant app on your iPad
-11. say `Ok Google` or `Hey Google` to activate voice input, then say `Talk to my test app` in the simulator in the Google Assitant app
+10. Launch the Google Assistant app on your iPad
+11. say `Ok Google` or `Hey Google` to activate voice input, then say `Talk to my test app` in the simulator in the Google Assistant app
 12. Ask questions to test
 
 ```plantuml
@@ -89,7 +99,7 @@ skinparam ParticipantPadding 10
 
 box "Local" #WhiteSmoke
 actor Person
-participant "Google Assitant App" as App
+participant "Google Assistant App" as App
 end box
 
 box "Internet" #WhiteSmoke
@@ -107,7 +117,7 @@ App ->> AoG : Request
 AoG ->> Dialogflow : Request
 AoG ->> App : Response
 App ->> Person : 'Sure. Getting the test version of my test app.'
-note right: The initial message from Actiong on Google
+note right: The initial message from Actions on Google
 Dialogflow ->> AoG : Response
 AoG ->> App : Response
 App ->> Person : 'Hello!'
@@ -130,7 +140,7 @@ note left: Say the response
 ### Preparation
 
 1. Click on `Fulfillment` in the left navigation on the Dialogflow page
-2. Clcik on `DISABLED` next to `Webhook` toggle to enable webhook
+2. Click on `DISABLED` next to `Webhook` toggle to enable webhook
 3. Enter the URL of the workshop server (e.g. https://xxxxxxxx.ngrok.io) to the `URL` field
 4. Enter a pair of a key and a value, `keys` and to the `HEADERS` field; `keys` and `{"ifttt":"*********************","openweathermap":"********************************"}`
 5. Press `SAVE` to save settings
@@ -143,9 +153,9 @@ If you forgot your IFTTT key, point your web browser to https://ifttt.com/maker_
 2. Press `CREATE INTENT` to create a new intent
 3. Enter `weather` as an action name in `Action`
 4. Type `How is the weather in Taipei, Taiwan?` to `User says`
-5. Double click on `Taiwan` and choose `@sys.geo-country`
-6. Check `REQUIRED` for `geo-city` and `geo-country`, then add prompts for both (e.g. `Which city?` and `Which country?`)
-7. Chcek `Use webhook` for `Fulfillment`, then press `SAVE`
+5. Double click on `Taiwan` and choose `@sys.geo-country` ![setting-entities](/assets/setting-entities.png)
+6. Check `REQUIRED` for `geo-city` and `geo-country`, then add prompts for both (e.g. `Which city?` and `Which country?`) ![setting-action](/assets/setting-action.png)
+7. Check `Use webhook` for `Fulfillment`, then press `SAVE`
 8. Click on `Integrations` and click on `Google Assistant`, then press `UPDATE DRAFT`
 9. Talk to your Google Assistant and see what happens
 
@@ -159,7 +169,7 @@ skinparam ParticipantPadding 10
 
 box "Local" #WhiteSmoke
 actor Person
-participant "Google Assitant App" as App
+participant "Google Assistant App" as App
 end box
 
 box "Internet" #WhiteSmoke
@@ -183,7 +193,7 @@ App ->> Person : Say the response
 @enduml
 ```
 
-The following is an example of a web request sent from Dialogflow.
+The following is an example of a webhook sent from Dialogflow.
 
 ```json
 {
@@ -234,7 +244,7 @@ The following is an example of a web request sent from Dialogflow.
 2. Press `CREATE INTENT` to create a new intent
 3. Enter `ifttt.TurnOn` as an action name in `Action`
 4. Give examples such as `Turn on the light`, `Turn the on`, `Light on` to `User says`
-5. Chcek `Use webhook` for `Fulfillment`, then press `SAVE`
+5. Check `Use webhook` for `Fulfillment`, then press `SAVE`
 6. Click on `Integrations` and click on `Google Assistant`, then press `UPDATE DRAFT`
 7. Point your web browser to https://ifttt.com/my_applets, then press `New Applet`
 8. Click on `+this`, choose Webhooks, fill the `Event Name` field with `TurnOn`, then press `Create trigger`
@@ -253,7 +263,7 @@ skinparam ParticipantPadding 10
 
 box "Local" #WhiteSmoke
 actor Person
-participant "Google Assitant App" as App
+participant "Google Assistant App" as App
 participant "LED Tag" as LedTag
 participant "MESH App" as MeshApp
 end box
@@ -293,5 +303,5 @@ In the two samples mentioned above, the server that Dialogflow agent was accessi
 
 ## References
 
-* OpenWeatherMap.org. "Weather API." Openweathermap. Accessed October 16, 2017. http://openweathermap.org/api.
-* Speaktoit, Inc. "Basics." Dialogflow. Accessed October 16, 2017. https://dialogflow.com/docs/getting-started/basics.
+- OpenWeatherMap.org. "Weather API." Openweathermap. Accessed October 16, 2017. http://openweathermap.org/api.
+- Speaktoit, Inc. "Basics." Dialogflow. Accessed October 16, 2017. https://dialogflow.com/docs/getting-started/basics.
