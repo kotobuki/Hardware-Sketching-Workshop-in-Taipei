@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/mayfair/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none} 
+      .markdown-preview.markdown-preview .reveal .slides {
+  font-family: "Helvetica Neue";
+  text-align: left;
+  font-size: 24pt;
+}
+.markdown-preview.markdown-preview .reveal .slides h1 {
+  font-size: 1.5em;
+  text-align: left;
+}
+.markdown-preview.markdown-preview .reveal .slides h2 {
+  font-size: 1.2em;
+  text-align: left;
+}
+.markdown-preview.markdown-preview .reveal .slides ul {
+  text-align: left;
+}
+.markdown-preview.markdown-preview .reveal .slides pre {
+  margin-left: 0;
+}
+.markdown-preview.markdown-preview .reveal .slide-number {
+  font-size: 1em;
+}
+html ol,
+ul {
+  padding-left: 20;
+}
+html pre {
+  word-break: break-all;
+}
+@page {
+  size: A4 portlait;
+  margin: 1.5cm;
+  @bottom {
+    content: counter(page);
+  }
+}
+.markdown-preview.markdown-preview.prince html body {
+  font-size: 10pt;
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="getting-started-with-mesh">Getting Started with MESH</h1>
+
+<h2 class="mume-header" id="what-is-mesh">What is MESH?</h2>
+
+<p>According to Takehiro Hagiwara, Co-Founder of MESH</p>
+<blockquote>
+<p>MESH is a toolkit that simplifies inventing and making to free students from the paralysis of technical challenges, and allow for more focus on creativity and discovery.</p>
+</blockquote>
+<p>Video: <a href="https://youtu.be/zgGyTU-pucM">MESH : How it works</a></p>
+<p>MESH is a tool that let you explore the world of IoT (Internet of things) using everyday objects, consisting of the MESH Tags, the MESH App and the Software Tags.</p>
+<p><img src="https://d1snu2um2qo33r.cloudfront.net/en/img/app/about-img.png" alt=""></p>
+<p>(source: <a href="http://meshprj.com/en/app/">http://meshprj.com/en/app/</a>)</p>
+<p>With MESH, you can:</p>
+<ul>
+<li>Connect to various internet services (i.e. Gmail and IFTTT)</li>
+<li>Connect to various wireless devices (i.e. Philips Hue and Olympus Air)</li>
+<li>Control functions on your iPhone, iPad or iPod touch (e.g. camera, speaker, microphone and notification)</li>
+</ul>
+<h2 class="mume-header" id="turn-on-your-mesh-tags">Turn on Your MESH Tags</h2>
+
+<p>The power button is located underneath the icon. If nothing when you press the icon, the power is off. To turn on your MESH Tag, press and hold the icon for two seconds. A white light will appear once your Tag is turned on (if the light does not appear, the MESH Tag has run out of battery). To turn off your MESH Tag, press and hold the icon again for two seconds.</p>
+<h2 class="mume-header" id="pair-your-mesh-tags-with-your-mesh-app">Pair Your MESH Tags with Your MESH App</h2>
+
+<ol>
+<li>Launch the MESH App</li>
+<li>Tap on the <code>+</code> icon in the top left to create a new recipe</li>
+<li>Tap on the recipe to open</li>
+<li>Tap on <code>+ Add</code> in the top right to start paring</li>
+<li>Bring your MESH Tags near to your device and pair one by one</li>
+</ol>
+<h2 class="mume-header" id="create-a-connection">Create a Connection</h2>
+
+<ol>
+<li>Tap on the Button Tag on your MESH App</li>
+<li>Drag the Tag onto the canvas</li>
+<li>Tap on the LED Tag, the drag and drop onto the canvas</li>
+<li>Connect the Tags</li>
+<li>Press the icon on the (physical) Button Tag and see what happens on the LED Tag</li>
+</ol>
+<h2 class="mume-header" id="how-to-use-the-mesh-design-pattern-cards">How to Use the MESH Design Pattern Cards</h2>
+
+<p>The MESH Design Pattern Cards is a set of cards to use in the scenes that develop ideas by multiplying problems you found or what you want to<br>
+make and what you can do with MESH.</p>
+<p>On the surface of each card what you can do with MESH is explained and on the back you can see how it is realized. By arranging multiple cards like Input &gt; Output, Input &gt; Processing &gt; Output, you can organize it even if it looks complicated at first glance. If you come up with usages or implementation methods that are not found on standard cards, please fill out blank cards and share them.</p>
+<h2 class="mume-header" id="lets-make-a-recipe-to-make-fun">Let's Make a Recipe to Make Fun</h2>
+
+<p>Reference: <a href="https://youtu.be/56IH6XfRHx4">Let's make a cup that talks using MESH</a></p>
+<ol>
+<li>Think about when and what to do in 2 minutes</li>
+<li>Make it actually using MESH in 5 minutes</li>
+<li>Present in turns in 3 minutes</li>
+</ol>
+<h2 class="mume-header" id="what-is-ifttt">What is IFTTT?</h2>
+
+<p>To connect things to the network, it is easy to use a web service that freely combines and executes various web services as triggers or actions. A representative example of such a web service is &quot;IFTTT&quot; operated by IFTTT Inc., a web service company in the United States.</p>
+<p>In addition to various web services including Twitter, Facebook, and Instagram, IFTTT supports devices such as smart lock, network compatible remote control, communication robot and so on. Also, it supports a mechanism for connecting homebrew devices.</p>
+<h2 class="mume-header" id="getting-started-with-ifttt">Getting Started with IFTTT</h2>
+
+<ol>
+<li>Point your web browser to <a href="https://ifttt.com/">https://ifttt.com/</a> and create an account</li>
+<li>Install an application for your iOS or Android device</li>
+<li>Create a recipe to get familiar with IFTTT terms (e.g. applets, services, triggers, actions and so on)</li>
+</ol>
+<h2 class="mume-header" id="lets-make-an-applet-to-make-fun">Let's Make an Applet to Make Fun</h2>
+
+<ol>
+<li>Think about when and what to do in 2 minutes</li>
+<li>Make it actually using MESH and IFTTT in 10 minutes</li>
+<li>Present in turns in 3 minutes</li>
+</ol>
+<h2 class="mume-header" id="what-is-the-gpio-tag">What is the GPIO Tag?</h2>
+
+<blockquote>
+<p>It’s for advanced users.<br>
+This gray GPIO (General Purpose Input Output) Tag enables you to enjoy wireless electronic kits and more. It has a digital and analog input/output that connects other sensors or actuators, such as light sensors, motors and written circuit with a conductive pen.</p>
+</blockquote>
+<p>A GPIO Tag has 3 Digital In pins, 3 Digital Out pins, 1 Analog In pin, 1 PWM Out pin, 1 VOut Supply pin and 1 GND pin (<a href="http://meshprj.com/support/faq/gpio/">details</a>).</p>
+<p>A GPIO Tag enables you to combine with an Arduino board by connecting with jumper wires, connect to little Bits and Grove modules via dedicated adapters. Moreover, several dedicated modules such as touch sensor and servo motor are on sale.</p>
+<h1 class="mume-header" id="getting-started-with-dialogflow">Getting Started with Dialogflow</h1>
+
+<h2 class="mume-header" id="what-is-dialogflow">What is Dialogflow?</h2>
+
+<ul>
+<li>A service that enables you to build engaging voice and text-based conversational interfaces powered by AI.</li>
+<li>By providing examples of what a user might say when interacting, analyze and understand the user's intent.</li>
+<li>Can be easily combined with popular touchpoints such as Google Assistant, Slack, and Facebook Messenger.</li>
+</ul>
+<h2 class="mume-header" id="basic-concepts">Basic concepts</h2>
+
+<ul>
+<li><strong>Agents</strong> are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.</li>
+<li><strong>Intents</strong> are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.</li>
+<li><strong>Entities</strong> are powerful tools used for extracting parameter values from natural language inputs.</li>
+</ul>
+<h2 class="mume-header" id="lets-make-your-first-agent">Let's Make Your First Agent</h2>
+
+<h3 class="mume-header" id="what-you-need">What You Need</h3>
+
+<ul>
+<li>Google account: 1</li>
+<li>PC: 1</li>
+<li>iOS or Android device: 1</li>
+<li>Google Assistant app: 1</li>
+<li>MESH app: 1</li>
+<li>MESH LED Tag: 1</li>
+<li>Bridge Server: 1</li>
+</ul>
+<h3 class="mume-header" id="the-first-step">The First Step</h3>
+
+<ol>
+<li>Point your web browser to <a href="https://dialogflow.com/">https://dialogflow.com/</a></li>
+<li>Press <code>SIGN UP FOR FREE</code></li>
+<li>Press <code>Google</code> under <code>Sign in with</code>, login with an account to be used for Dialogflow, allow <a href="http://dialogflow.com">dialogflow.com</a> to 'View and manage your data across Google Cloud Platform services', and accept the <code>Terms of Service</code></li>
+<li>Now it's time to create your first agent! Press <code>CREATE AGENT</code> to go ahead and allow <a href="http://dialogflow.com">dialogflow.com</a> to 'View and manage your Actions on Google'</li>
+<li>Define the name of your first agent (e.g. Workshop) and press <code>SAVE</code></li>
+<li>Click on the icon in the top left to show the left navigation</li>
+<li>Choose <code>Default Welcome Intent</code></li>
+<li>Give a few examples to <code>User says</code> (e.g. 'Hi', 'Hello', 'Howdy')</li>
+<li>Press <code>SAVE</code> and wait for a while till <code>Agent training completed</code> appers on the bottom right of the console</li>
+<li>Pick a phrase similar to what you gave to <code>User says</code>, type in the phrase to <code>Try it now</code> field on the upper right of the console and see what happens</li>
+</ol>
+<p>Congratulations! You were able to create the first (simple) agent. This agent works on the following system which consists of a local web browser and a web service on the Internet.</p>
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="242px" preserveAspectRatio="none" style="width:325px;height:242px;" version="1.1" viewBox="0 0 325 242" width="325px" zoomAndPan="magnify"><defs></defs><g><rect fill="#F5F5F5" height="220.86" style="stroke: #A80036; stroke-width: 1.0;" width="149" x="74" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="135" y="14.04">Local</text><rect fill="#F5F5F5" height="220.86" style="stroke: #A80036; stroke-width: 1.0;" width="89" x="225" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="250" y="14.04">Internet</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="96" x2="96" y1="95.14" y2="230.86"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="172" x2="172" y1="95.14" y2="230.86"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="269" x2="269" y1="95.14" y2="230.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="78" y="93.01">Person</text><ellipse cx="96.5" cy="30.21" fill="#FEFECE" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"></ellipse><path d="M96.5,38.21 L96.5,65.21 M83.5,46.21 L109.5,46.21 M96.5,65.21 L83.5,80.21 M96.5,65.21 L109.5,80.21 " fill="#FEFECE" style="stroke: #A80036; stroke-width: 2.0;"></path><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="74" x="135" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="60" x="142" y="85.01">Web Browser</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="239" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="246" y="85.01">Dialogflow</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="170" x2="160" y1="125.14" y2="121.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="170" x2="160" y1="125.14" y2="129.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="171" y1="125.14" y2="125.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="21" x="103.5" y="121.94">'Hi!''</text><polygon fill="#FBFB77" points="8,110.14,8,131.14,92,131.14,92,120.14,82,110.14,8,110.14" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="82" x2="82" y1="110.14" y2="120.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="92" x2="82" y1="120.14" y2="120.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="63" x="14" y="124.94">Type a phrase</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="267.5" x2="257.5" y1="154.07" y2="150.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="267.5" x2="257.5" y1="154.07" y2="158.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="268.5" y1="154.07" y2="154.07"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="179" y="150.87">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="182" y1="180" y2="176"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="182" y1="180" y2="184"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="268.5" y1="180" y2="180"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="189" y="176.8">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="106.5" y1="208.93" y2="204.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="106.5" y1="208.93" y2="212.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="171" y1="208.93" y2="208.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="113.5" y="205.73">'Hello!'</text><polygon fill="#FBFB77" points="177,193.93,177,214.93,285,214.93,285,203.93,275,193.93,177,193.93" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="275" x2="275" y1="193.93" y2="203.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="285" x2="275" y1="203.93" y2="203.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="87" x="183" y="208.73">Show the response</text><!--
+@startuml
+hide footbox
+skinparam defaultFontName Helvetica Neue
+skinparam DefaultFontSize 10
+skinparam Shadowing false
+skinparam ParticipantPadding 10
+
+box "Local" #WhiteSmoke
+actor Person
+participant "Web Browser" as Browser
+end box
+
+box "Internet" #WhiteSmoke
+participant "Dialogflow" as Dialogflow
+end box
+
+Person ->> Browser : 'Hi!''
+note left: Type a phrase
+Browser ->> Dialogflow : Request
+Dialogflow ->> Browser : Response
+Browser ->> Person : 'Hello!'
+note right: Show the response
+@enduml
+
+PlantUML version 1.2017.15(Tue Jul 04 01:45:34 JST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 9+181
+Operating System: Mac OS X
+OS Version: 10.12.6
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p>
+<h3 class="mume-header" id="add-conversations-for-small-talk">Add Conversations for Small Talk</h3>
+
+<ol>
+<li>Click on <code>Small Talk</code> in the left navigation and click on <code>Enable</code> to enable small talk</li>
+<li>Clink on <code>About agent</code> and pick a topic (e.g. <code>About agent</code>)</li>
+<li>Give answers to questions</li>
+<li>Press <code>SAVE</code> and try by typing phrases to <code>Try it now</code> field</li>
+</ol>
+<h3 class="mume-header" id="your-first-agent-with-google-assistant">Your First Agent with Google Assistant</h3>
+
+<ol>
+<li>Click on <code>Integrations</code> in the left navigation</li>
+<li>Click on <code>Google Assistant</code> and click on the toggle on the top right</li>
+<li>Press <code>AUTHORIZE</code>, choose your account and allow <a href="http://dialogflow.com">dialogflow.com</a> to 'View and manage your Google Assistant voice commands, dialog and grammar'</li>
+<li>Press <code>UPDATE DRAFT</code> to update your Actions on Google draft with your Dialogflow configuration</li>
+<li>Press <code>VISIT CONSOLE</code> to visit the Actions on Google console</li>
+<li>Click on <code>Simulator</code> in the left navigation</li>
+<li>Press <code>START TESTING</code> to start testing your agent</li>
+<li>Choose <code>Actions on Google - DRAFT</code> in the <code>Start testing your app</code> and press <code>DONE</code></li>
+<li>Type <code>Talk to my test app</code> in the simulator</li>
+<li>Type questions to test</li>
+<li>Launch the Google Assistant app on your iPad</li>
+<li>say <code>Ok Google</code> or <code>Hey Google</code> to activate voice input, then say <code>Talk to my test app</code> in the simulator in the Google Assistant app</li>
+<li>Ask questions to test</li>
+</ol>
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="658px" preserveAspectRatio="none" style="width:643px;height:658px;" version="1.1" viewBox="0 0 643 658" width="643px" zoomAndPan="magnify"><defs></defs><g><rect fill="#F5F5F5" height="636.44" style="stroke: #A80036; stroke-width: 1.0;" width="323" x="88" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="236" y="14.04">Local</text><rect fill="#F5F5F5" height="636.44" style="stroke: #A80036; stroke-width: 1.0;" width="217" x="413" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="502" y="14.04">Internet</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="110" x2="110" y1="95.14" y2="646.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="341" x2="341" y1="95.14" y2="646.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="476" x2="476" y1="95.14" y2="646.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="585" x2="585" y1="95.14" y2="646.44"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="92" y="93.01">Person</text><ellipse cx="110.5" cy="30.21" fill="#FEFECE" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"></ellipse><path d="M110.5,38.21 L110.5,65.21 M97.5,46.21 L123.5,46.21 M110.5,65.21 L97.5,80.21 M110.5,65.21 L123.5,80.21 " fill="#FEFECE" style="stroke: #A80036; stroke-width: 2.0;"></path><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="111" x="286" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="97" x="293" y="85.01">Google Assistant App</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="98" x="427" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="84" x="434" y="85.01">Actions on Google</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="555" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="562" y="85.01">Dialogflow</text><rect fill="#EEEEEE" height="3" style="stroke: #EEEEEE; stroke-width: 1.0;" width="628" x="3" y="124.245"></rect><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="631" y1="124.245" y2="124.245"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="631" y1="127.245" y2="127.245"></line><rect fill="#EEEEEE" height="20.21" style="stroke: #000000; stroke-width: 2.0;" width="78" x="278" y="115.14"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="61" x="284" y="129.18">Initialization</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="339.5" x2="329.5" y1="165.35" y2="161.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="339.5" x2="329.5" y1="165.35" y2="169.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="165.35" y2="165.35"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="55" x="117.5" y="162.15">'Ok Google'</text><polygon fill="#FBFB77" points="19,150.35,19,171.35,105,171.35,105,160.35,95,150.35,19,150.35" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="95" x2="95" y1="150.35" y2="160.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="105" x2="95" y1="160.35" y2="160.35"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="65" x="25" y="165.15">Say a hotword</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="197.28" y2="193.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="197.28" y2="201.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="197.28" y2="197.28"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="23" x="127.5" y="194.08">Ping!</text><polygon fill="#FBFB77" points="346,182.28,346,203.28,427,203.28,427,192.28,417,182.28,346,182.28" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="417" x2="417" y1="182.28" y2="192.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="427" x2="417" y1="192.28" y2="192.28"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="60" x="352" y="197.08">Start listening</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="339.5" x2="329.5" y1="226.21" y2="222.21"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="339.5" x2="329.5" y1="226.21" y2="230.21"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="226.21" y2="226.21"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="92" x="117.5" y="223.01">'Talk to my test app'</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="474" x2="464" y1="252.14" y2="248.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="474" x2="464" y1="252.14" y2="256.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="475" y1="252.14" y2="252.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="348.5" y="248.94">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="583.5" x2="573.5" y1="278.07" y2="274.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="583.5" x2="573.5" y1="278.07" y2="282.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="584.5" y1="278.07" y2="278.07"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="483" y="274.87">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="351.5" y1="304" y2="300"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="351.5" y1="304" y2="308"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="475" y1="304" y2="304"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="358.5" y="300.8">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="332.93" y2="328.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="332.93" y2="336.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="332.93" y2="332.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="207" x="127.5" y="329.73">'Sure. Getting the test version of my test app.'</text><polygon fill="#FBFB77" points="346,317.93,346,338.93,563,338.93,563,327.93,553,317.93,346,317.93" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="553" x2="553" y1="317.93" y2="327.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="563" x2="553" y1="327.93" y2="327.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="196" x="352" y="332.73">The initial message from Actions on Google</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="486" y1="361.86" y2="357.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="486" y1="361.86" y2="365.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="584.5" y1="361.86" y2="361.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="493" y="358.66">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="351.5" y1="387.79" y2="383.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="351.5" y1="387.79" y2="391.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="475" y1="387.79" y2="387.79"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="358.5" y="384.59">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="416.72" y2="412.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="416.72" y2="420.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="416.72" y2="416.72"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="127.5" y="413.52">'Hello!'</text><polygon fill="#FBFB77" points="346,401.72,346,422.72,528,422.72,528,411.72,518,401.72,346,401.72" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="518" x2="518" y1="401.72" y2="411.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="528" x2="518" y1="411.72" y2="411.72"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="161" x="352" y="416.52">A welcome message from the agent</text><rect fill="#EEEEEE" height="3" style="stroke: #EEEEEE; stroke-width: 1.0;" width="628" x="3" y="447.755"></rect><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="631" y1="447.755" y2="447.755"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="631" y1="450.755" y2="450.755"></line><rect fill="#EEEEEE" height="20.21" style="stroke: #000000; stroke-width: 2.0;" width="68" x="283" y="438.65"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="289" y="452.69">Repetition</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="339.5" x2="329.5" y1="488.86" y2="484.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="339.5" x2="329.5" y1="488.86" y2="492.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="488.86" y2="488.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="69" x="117.5" y="485.66">'Who are you?'</text><polygon fill="#FBFB77" points="27,473.86,27,494.86,105,494.86,105,483.86,95,473.86,27,473.86" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="95" x2="95" y1="473.86" y2="483.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="105" x2="95" y1="483.86" y2="483.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="57" x="33" y="488.66">Say a phrase</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="474" x2="464" y1="517.79" y2="513.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="474" x2="464" y1="517.79" y2="521.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="475" y1="517.79" y2="517.79"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="348.5" y="514.59">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="583.5" x2="573.5" y1="543.72" y2="539.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="583.5" x2="573.5" y1="543.72" y2="547.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="584.5" y1="543.72" y2="543.72"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="483" y="540.52">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="486" y1="569.65" y2="565.65"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="486" y1="569.65" y2="573.65"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="476" x2="584.5" y1="569.65" y2="569.65"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="493" y="566.45">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="351.5" y1="595.58" y2="591.58"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="351.5" y1="595.58" y2="599.58"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="341.5" x2="475" y1="595.58" y2="595.58"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="358.5" y="592.38">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="624.51" y2="620.51"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="120.5" y1="624.51" y2="628.51"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="110.5" x2="340.5" y1="624.51" y2="624.51"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="38" x="127.5" y="621.31">'I am ...'</text><polygon fill="#FBFB77" points="8,609.51,8,630.51,106,630.51,106,619.51,96,609.51,8,609.51" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="96" x2="96" y1="609.51" y2="619.51"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="106" x2="96" y1="619.51" y2="619.51"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="77" x="14" y="624.31">Say the response</text><!--
+@startuml
+hide footbox
+skinparam defaultFontName Helvetica Neue
+skinparam DefaultFontSize 10
+skinparam Shadowing false
+skinparam ParticipantPadding 10
+
+box "Local" #WhiteSmoke
+actor Person
+participant "Google Assistant App" as App
+end box
+
+box "Internet" #WhiteSmoke
+participant "Actions on Google" as AoG
+participant "Dialogflow" as Dialogflow
+end box
+
+== Initialization ==
+Person ->> App : 'Ok Google'
+note left: Say a hotword
+App ->> Person : Ping!
+note right: Start listening
+Person ->> App : 'Talk to my test app'
+App ->> AoG : Request
+AoG ->> Dialogflow : Request
+AoG ->> App : Response
+App ->> Person : 'Sure. Getting the test version of my test app.'
+note right: The initial message from Actions on Google
+Dialogflow ->> AoG : Response
+AoG ->> App : Response
+App ->> Person : 'Hello!'
+note right: A welcome message from the agent
+
+== Repetition ==
+Person ->> App : 'Who are you?'
+note left: Say a phrase
+App ->> AoG : Request
+AoG ->> Dialogflow : Request
+Dialogflow ->> AoG : Response
+AoG ->> App : Response
+App ->> Person : 'I am ...'
+note left: Say the response
+@enduml
+
+PlantUML version 1.2017.15(Tue Jul 04 01:45:34 JST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 9+181
+Operating System: Mac OS X
+OS Version: 10.12.6
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p>
+<h2 class="mume-header" id="lets-connect-your-agent-to-web-services">Let's Connect Your Agent to Web Services</h2>
+
+<h3 class="mume-header" id="preparation">Preparation</h3>
+
+<ol>
+<li>Click on <code>Fulfillment</code> in the left navigation on the Dialogflow page</li>
+<li>Click on <code>DISABLED</code> next to <code>Webhook</code> toggle to enable webhook</li>
+<li>Enter the URL of the workshop server (e.g. <a href="https://xxxxxxxx.ngrok.io">https://xxxxxxxx.ngrok.io</a>) to the <code>URL</code> field</li>
+<li>Enter a pair of a key and a value, <code>keys</code> and to the <code>HEADERS</code> field; <code>keys</code> and <code>{&quot;ifttt&quot;:&quot;*********************&quot;,&quot;openweathermap&quot;:&quot;********************************&quot;}</code></li>
+<li>Press <code>SAVE</code> to save settings</li>
+</ol>
+<p>If you forgot your IFTTT key, point your web browser to <a href="https://ifttt.com/maker_webhooks">https://ifttt.com/maker_webhooks</a>, then click on <code>Documentation</code> to see your key.</p>
+<h3 class="mume-header" id="weather">Weather</h3>
+
+<ol>
+<li>Click on <code>Intents</code> in the left navigation</li>
+<li>Press <code>CREATE INTENT</code> to create a new intent</li>
+<li>Enter <code>weather</code> as an action name in <code>Action</code></li>
+<li>Type <code>How is the weather in Taipei, Taiwan?</code> to <code>User says</code></li>
+<li>Double click on <code>Taiwan</code> and choose <code>@sys.geo-country</code> <img src="assets/setting-entities.png" alt="setting-entities"></li>
+<li>Check <code>REQUIRED</code> for <code>geo-city</code> and <code>geo-country</code>, then add prompts for both (e.g. <code>Which city?</code> and <code>Which country?</code>) <img src="assets/setting-action.png" alt="setting-action"></li>
+<li>Check <code>Use webhook</code> for <code>Fulfillment</code>, then press <code>SAVE</code></li>
+<li>Click on <code>Integrations</code> and click on <code>Google Assistant</code>, then press <code>UPDATE DRAFT</code></li>
+<li>Talk to your Google Assistant and see what happens</li>
+</ol>
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="426px" preserveAspectRatio="none" style="width:657px;height:426px;" version="1.1" viewBox="0 0 657 426" width="657px" zoomAndPan="magnify"><defs></defs><g><rect fill="#F5F5F5" height="404.65" style="stroke: #A80036; stroke-width: 1.0;" width="193" x="4" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="87" y="14.04">Local</text><rect fill="#F5F5F5" height="404.65" style="stroke: #A80036; stroke-width: 1.0;" width="445" x="199" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="402" y="14.04">Internet</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="26" x2="26" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="127" x2="127" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="262" x2="262" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="371" x2="371" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="468" x2="468" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="582" x2="582" y1="95.14" y2="414.65"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="8" y="93.01">Person</text><ellipse cx="26.5" cy="30.21" fill="#FEFECE" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"></ellipse><path d="M26.5,38.21 L26.5,65.21 M13.5,46.21 L39.5,46.21 M26.5,65.21 L13.5,80.21 M26.5,65.21 L39.5,80.21 " fill="#FEFECE" style="stroke: #A80036; stroke-width: 2.0;"></path><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="111" x="72" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="97" x="79" y="85.01">Google Assistant App</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="98" x="213" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="84" x="220" y="85.01">Actions on Google</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="341" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="348" y="85.01">Dialogflow</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="432" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="59" x="439" y="85.01">Bridge Server</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="95" x="535" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="542" y="85.01">OpenWeatherMap</text><rect fill="#EEEEEE" height="3" style="stroke: #EEEEEE; stroke-width: 1.0;" width="642" x="3" y="124.245"></rect><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="645" y1="124.245" y2="124.245"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="645" y1="127.245" y2="127.245"></line><rect fill="#EEEEEE" height="20.21" style="stroke: #000000; stroke-width: 2.0;" width="68" x="290" y="115.14"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="296" y="129.18">Repetition</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="125.5" x2="115.5" y1="162.35" y2="158.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="125.5" x2="115.5" y1="162.35" y2="166.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="126.5" y1="162.35" y2="162.35"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="33.5" y="159.15">Say something</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="260" x2="250" y1="188.28" y2="184.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="260" x2="250" y1="188.28" y2="192.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="261" y1="188.28" y2="188.28"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="134.5" y="185.08">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="369.5" x2="359.5" y1="214.21" y2="210.21"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="369.5" x2="359.5" y1="214.21" y2="218.21"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="370.5" y1="214.21" y2="214.21"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="269" y="211.01">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="466.5" x2="456.5" y1="240.14" y2="236.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="466.5" x2="456.5" y1="240.14" y2="244.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="467.5" y1="240.14" y2="240.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="378.5" y="236.94">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="580.5" x2="570.5" y1="266.07" y2="262.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="580.5" x2="570.5" y1="266.07" y2="270.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="581.5" y1="266.07" y2="266.07"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="475.5" y="262.87">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="478.5" y1="292" y2="288"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="478.5" y1="292" y2="296"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="581.5" y1="292" y2="292"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="485.5" y="288.8">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="381.5" y1="317.93" y2="313.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="381.5" y1="317.93" y2="321.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="467.5" y1="317.93" y2="317.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="388.5" y="314.73">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="272" y1="343.86" y2="339.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="272" y1="343.86" y2="347.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="370.5" y1="343.86" y2="343.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="279" y="340.66">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="137.5" y1="369.79" y2="365.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="137.5" y1="369.79" y2="373.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="261" y1="369.79" y2="369.79"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="144.5" y="366.59">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="395.72" y2="391.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="395.72" y2="399.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="126.5" y1="395.72" y2="395.72"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="77" x="43.5" y="392.52">Say the response</text><!--
+@startuml
+hide footbox
+skinparam defaultFontName Helvetica Neue
+skinparam DefaultFontSize 10
+skinparam Shadowing false
+skinparam ParticipantPadding 10
+
+box "Local" #WhiteSmoke
+actor Person
+participant "Google Assistant App" as App
+end box
+
+box "Internet" #WhiteSmoke
+participant "Actions on Google" as AoG
+participant "Dialogflow" as Dialogflow
+participant "Bridge Server" as Bridge
+participant "OpenWeatherMap" as OWM
+end box
+
+== Repetition ==
+Person ->> App : Say something
+App ->> AoG : Request
+AoG ->> Dialogflow : Request
+Dialogflow ->> Bridge : Request
+Bridge ->> OWM : Request
+OWM ->> Bridge : Response
+Bridge ->> Dialogflow : Response
+Dialogflow ->> AoG : Response
+AoG ->> App : Response
+App ->> Person : Say the response
+@enduml
+
+PlantUML version 1.2017.15(Tue Jul 04 01:45:34 JST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 9+181
+Operating System: Mac OS X
+OS Version: 10.12.6
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p>
+<p>The following is an example of a webhook sent from Dialogflow.</p>
+<pre class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"********-****-****-****-************"</span><span class="token punctuation">,</span>
+  <span class="token property">"timestamp"</span><span class="token operator">:</span> <span class="token string">"2017-10-17T00:43:12.992Z"</span><span class="token punctuation">,</span>
+  <span class="token property">"lang"</span><span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+  <span class="token property">"result"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"source"</span><span class="token operator">:</span> <span class="token string">"agent"</span><span class="token punctuation">,</span>
+    <span class="token property">"resolvedQuery"</span><span class="token operator">:</span> <span class="token string">"How is the weather in Nagoya, Japan?"</span><span class="token punctuation">,</span>
+    <span class="token property">"action"</span><span class="token operator">:</span> <span class="token string">"weather"</span><span class="token punctuation">,</span>
+    <span class="token property">"actionIncomplete"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"parameters"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"geo-city"</span><span class="token operator">:</span> <span class="token string">"Nagoya"</span><span class="token punctuation">,</span>
+      <span class="token property">"geo-country"</span><span class="token operator">:</span> <span class="token string">"Japan"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"contexts"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"metadata"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"intentId"</span><span class="token operator">:</span> <span class="token string">"********-****-****-****-************"</span><span class="token punctuation">,</span>
+      <span class="token property">"webhookUsed"</span><span class="token operator">:</span> <span class="token string">"true"</span><span class="token punctuation">,</span>
+      <span class="token property">"webhookForSlotFillingUsed"</span><span class="token operator">:</span> <span class="token string">"false"</span><span class="token punctuation">,</span>
+      <span class="token property">"webhookResponseTime"</span><span class="token operator">:</span> <span class="token number">6383</span><span class="token punctuation">,</span>
+      <span class="token property">"intentName"</span><span class="token operator">:</span> <span class="token string">"Weather"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"fulfillment"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"speech"</span><span class="token operator">:</span> <span class="token string">"The current weather in Aoichō is light rain, and the temperature is 15 °C, the humidity is 93 %."</span><span class="token punctuation">,</span>
+      <span class="token property">"displayText"</span><span class="token operator">:</span> <span class="token string">"The current weather in Aoichō is light rain, and the temperature is 15 °C, the humidity is 93 %."</span><span class="token punctuation">,</span>
+      <span class="token property">"messages"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">"type"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"********-****-****-****-************"</span><span class="token punctuation">,</span>
+          <span class="token property">"speech"</span><span class="token operator">:</span> <span class="token string">"The current weather in Aoichō is light rain, and the temperature is 15 °C, the humidity is 93 %."</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"score"</span><span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"status"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"code"</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+    <span class="token property">"errorType"</span><span class="token operator">:</span> <span class="token string">"success"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"sessionId"</span><span class="token operator">:</span> <span class="token string">"********-****-****-****-************"</span>
+<span class="token punctuation">}</span>
+</pre>
+<h3 class="mume-header" id="ifttt">IFTTT</h3>
+
+<ol>
+<li>Click on <code>Intents</code> in the left navigation</li>
+<li>Press <code>CREATE INTENT</code> to create a new intent</li>
+<li>Enter <code>ifttt.TurnOn</code> as an action name in <code>Action</code></li>
+<li>Give examples such as <code>Turn on the light</code>, <code>Turn the on</code>, <code>Light on</code> to <code>User says</code></li>
+<li>Check <code>Use webhook</code> for <code>Fulfillment</code>, then press <code>SAVE</code></li>
+<li>Click on <code>Integrations</code> and click on <code>Google Assistant</code>, then press <code>UPDATE DRAFT</code></li>
+<li>Point your web browser to <a href="https://ifttt.com/my_applets">https://ifttt.com/my_applets</a>, then press <code>New Applet</code></li>
+<li>Click on <code>+this</code>, choose Webhooks, fill the <code>Event Name</code> field with <code>TurnOn</code>, then press <code>Create trigger</code></li>
+<li>Click on <code>+that</code>, choose MESH, fill <code>EventID</code> with <code>{{EventName}}</code>, then press <code>Create action</code></li>
+<li>Press <code>Finish</code> to make an applet</li>
+<li>Create a recipe on the MESH app on your iPad to connect a IFTTT tag to a LED tag</li>
+<li>Talk to your Google Assistant and see what happens</li>
+</ol>
+<p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="543px" preserveAspectRatio="none" style="width:827px;height:543px;" version="1.1" viewBox="0 0 827 543" width="827px" zoomAndPan="magnify"><defs></defs><g><rect fill="#F5F5F5" height="521.09" style="stroke: #A80036; stroke-width: 1.0;" width="371" x="4" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="176" y="14.04">Local</text><rect fill="#F5F5F5" height="521.09" style="stroke: #A80036; stroke-width: 1.0;" width="391" x="377" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="553" y="14.04">Internet</text><rect fill="#FFFFFF" height="30.93" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="728.5" y="429.37"></rect><line style="stroke: #A80036; stroke-width: 1.0;" x1="26" x2="26" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="26" x2="26" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26" x2="26" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="129" x2="129" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="129" x2="129" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="129" x2="129" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="241" x2="241" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="241" x2="241" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="241" x2="241" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="329" x2="329" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="329" x2="329" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="329" x2="329" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="440" x2="440" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="440" x2="440" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="440" x2="440" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="549" x2="549" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="549" x2="549" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="549" x2="549" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="646" x2="646" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="646" x2="646" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="646" x2="646" y1="404.37" y2="531.09"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="733" x2="733" y1="95.14" y2="364.44"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,4.0;" x1="733" x2="733" y1="364.44" y2="404.37"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="733" x2="733" y1="404.37" y2="531.09"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="8" y="93.01">Person</text><ellipse cx="26.5" cy="30.21" fill="#FEFECE" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"></ellipse><path d="M26.5,38.21 L26.5,65.21 M13.5,46.21 L39.5,46.21 M26.5,65.21 L13.5,80.21 M26.5,65.21 L39.5,80.21 " fill="#FEFECE" style="stroke: #A80036; stroke-width: 2.0;"></path><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="111" x="74" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="97" x="81" y="85.01">Google Assistant App</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="53" x="215" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="39" x="222" y="85.01">LED Tag</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="63" x="298" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="49" x="305" y="85.01">MESH App</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="98" x="391" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="84" x="398" y="85.01">Actions on Google</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="519" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="526" y="85.01">Dialogflow</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="610" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="59" x="617" y="85.01">Bridge Server</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="41" x="713" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="27" x="720" y="85.01">IFTTT</text><rect fill="#FFFFFF" height="30.93" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="728.5" y="429.37"></rect><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="117.5" y1="122.14" y2="118.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="117.5" y1="122.14" y2="126.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="128.5" y1="122.14" y2="122.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="79" x="33.5" y="118.94">`Turn the light on`</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="438" x2="428" y1="148.07" y2="144.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="438" x2="428" y1="148.07" y2="152.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="129.5" x2="439" y1="148.07" y2="148.07"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="136.5" y="144.87">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="547.5" x2="537.5" y1="174" y2="170"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="547.5" x2="537.5" y1="174" y2="178"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="440" x2="548.5" y1="174" y2="174"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="447" y="170.8">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="644.5" x2="634.5" y1="199.93" y2="195.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="644.5" x2="634.5" y1="199.93" y2="203.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="549.5" x2="645.5" y1="199.93" y2="199.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="556.5" y="196.73">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="731.5" x2="721.5" y1="225.86" y2="221.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="731.5" x2="721.5" y1="225.86" y2="229.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="646.5" x2="732.5" y1="225.86" y2="225.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="653.5" y="222.66">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="646.5" x2="656.5" y1="251.79" y2="247.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="646.5" x2="656.5" y1="251.79" y2="255.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="646.5" x2="732.5" y1="251.79" y2="251.79"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="663.5" y="248.59">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="549.5" x2="559.5" y1="277.72" y2="273.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="549.5" x2="559.5" y1="277.72" y2="281.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="549.5" x2="645.5" y1="277.72" y2="277.72"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="566.5" y="274.52">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="440" x2="450" y1="303.65" y2="299.65"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="440" x2="450" y1="303.65" y2="307.65"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="440" x2="548.5" y1="303.65" y2="303.65"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="457" y="300.45">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="129.5" x2="139.5" y1="329.58" y2="325.58"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="129.5" x2="139.5" y1="329.58" y2="333.58"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="129.5" x2="439" y1="329.58" y2="329.58"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="146.5" y="326.38">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="355.51" y2="351.51"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="355.51" y2="359.51"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="128.5" y1="355.51" y2="355.51"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="29" x="43.5" y="352.31">'Sure!'</text><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="90" x="335" y="388.24">up to a few minutes</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="733.5" x2="780.5" y1="417.3" y2="417.3"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="780.5" x2="780.5" y1="417.3" y2="430.3"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="739.5" x2="780.5" y1="430.3" y2="430.3"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="739.5" x2="749.5" y1="430.3" y2="426.3"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="739.5" x2="749.5" y1="430.3" y2="434.3"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="70" x="745.5" y="413.17">Execute applets</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="329.5" x2="339.5" y1="460.3" y2="456.3"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="329.5" x2="339.5" y1="460.3" y2="464.3"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="329.5" x2="732.5" y1="460.3" y2="460.3"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="346.5" y="457.1">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="241.5" x2="251.5" y1="486.23" y2="482.23"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="241.5" x2="251.5" y1="486.23" y2="490.23"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="241.5" x2="328.5" y1="486.23" y2="486.23"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="258.5" y="483.03">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="512.16" y2="508.16"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="512.16" y2="516.16"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="240.5" y1="512.16" y2="512.16"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="23" x="43.5" y="508.96">Light</text><!--
+@startuml
+hide footbox
+skinparam defaultFontName Helvetica Neue
+skinparam DefaultFontSize 10
+skinparam Shadowing false
+skinparam ParticipantPadding 10
+
+box "Local" #WhiteSmoke
+actor Person
+participant "Google Assistant App" as App
+participant "LED Tag" as LedTag
+participant "MESH App" as MeshApp
+end box
+
+box "Internet" #WhiteSmoke
+participant "Actions on Google" as AoG
+participant "Dialogflow" as Dialogflow
+participant "Bridge Server" as Bridge
+participant "IFTTT" as IFTTT
+end box
+
+Person ->> App : `Turn the light on`
+App ->> AoG : Request
+AoG ->> Dialogflow : Request
+Dialogflow ->> Bridge : Request
+Bridge ->> IFTTT : Request
+IFTTT ->> Bridge : Response
+Bridge ->> Dialogflow : Response
+Dialogflow ->> AoG : Response
+AoG ->> App : Response
+App ->> Person : 'Sure!'
+... up to a few minutes ...
+IFTTT ->> IFTTT : Execute applets
+activate IFTTT
+IFTTT ->> MeshApp : Request
+deactivate IFTTT
+MeshApp ->> LedTag: Request
+LedTag ->> Person: Light
+@enduml
+
+PlantUML version 1.2017.15(Tue Jul 04 01:45:34 JST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 9+181
+Operating System: Mac OS X
+OS Version: 10.12.6
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p>
+<h3 class="mume-header" id="what-is-the-bridge-server-anyway">What Is the Bridge Server Anyway?</h3>
+
+<p>In the two samples mentioned above, the server that Dialogflow agent was accessing to execute fullfillment is implemented in JavsScript and Node.js. If you want to adapt to actions other than <code>weather</code> and <code>ifttt</code>, you need to modify and extend the code.</p>
+<pre class="language-js {code_block=true}"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> request <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'request'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> bodyParser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'body-parser'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>bodyParser<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>headers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> action <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'action'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'action: '</span> <span class="token operator">+</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">'ifttt'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> key <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'keys'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'ifttt'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> event <span class="token operator">=</span> action<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token function">callIftttApi</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> errorMessage <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'speech'</span><span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`An error occurred.`</span></span><span class="token punctuation">,</span>
+        <span class="token string">'displayText'</span><span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`An error occurred. </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>error<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">'weather'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> appId <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'keys'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'openweathermap'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> city <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'parameters'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'geo-city'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> country <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'parameters'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'geo-country'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token function">callOpenWeatherMapApi</span><span class="token punctuation">(</span>city<span class="token punctuation">,</span> country<span class="token punctuation">,</span> appId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> errorMessage <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'speech'</span><span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`An error occurred.`</span></span><span class="token punctuation">,</span>
+        <span class="token string">'displayText'</span><span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`An error occurred. </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>error<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">callIftttApi</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>onFulfilled<span class="token punctuation">,</span> onRejected<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>event <span class="token operator">===</span> undefined<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token string">'IFTTT event is not defined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> undefined<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token string">'IFTTT key is not defined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+      uri<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`https://maker.ifttt.com/trigger/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>event<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/with/key/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+      form<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        value1<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        value2<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        value3<span class="token punctuation">:</span> <span class="token string">''</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      json<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token punctuation">(</span>error<span class="token punctuation">,</span> response<span class="token punctuation">,</span> body<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'status code: '</span> <span class="token operator">+</span> response<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>statusCode<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>body<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode <span class="token operator">!==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>statusCode<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>body<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">const</span> responseToDialogflow <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'speech'</span><span class="token punctuation">:</span> body<span class="token punctuation">,</span>
+        <span class="token string">'displayText'</span><span class="token punctuation">:</span> body
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token function">onFulfilled</span><span class="token punctuation">(</span>responseToDialogflow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">callOpenWeatherMapApi</span><span class="token punctuation">(</span>city<span class="token punctuation">,</span> country<span class="token punctuation">,</span> appId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>onFulfilled<span class="token punctuation">,</span> onRejected<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>city <span class="token operator">===</span> undefined<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token string">'City is not defined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>country <span class="token operator">===</span> undefined<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token string">'Country is not defined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>appId <span class="token operator">===</span> undefined<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token string">'Open Weather Map app id is not defined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// units: default, imperial or metric</span>
+      uri<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`http://api.openweathermap.org/data/2.5/weather?units=metric&amp;q=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>city<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>country<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;appid=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>appId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token punctuation">(</span>error<span class="token punctuation">,</span> response<span class="token punctuation">,</span> body<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> result <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'status code: '</span> <span class="token operator">+</span> response<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>statusCode<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>body<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode <span class="token operator">!==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">onRejected</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>statusCode<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">[</span><span class="token string">'message'</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">const</span> weather <span class="token operator">=</span> <span class="token template-string"><span class="token string">`The current weather in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">[</span><span class="token string">'weather'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'description'</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, and the temperature is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">[</span><span class="token string">'main'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'temp'</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> °C, the humidity is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">[</span><span class="token string">'main'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'humidity'</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> %.`</span></span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>weather<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">const</span> responseToDialogflow <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'speech'</span><span class="token punctuation">:</span> weather<span class="token punctuation">,</span>
+        <span class="token string">'displayText'</span><span class="token punctuation">:</span> weather
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token function">onFulfilled</span><span class="token punctuation">(</span>responseToDialogflow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> PORT <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>PORT <span class="token operator">||</span> <span class="token number">8080</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>PORT<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`App listening on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>PORT<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Press Ctrl+C to quit.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre>
+<h2 class="mume-header" id="references">References</h2>
+
+<ul>
+<li><a href="http://OpenWeatherMap.org">OpenWeatherMap.org</a>. &quot;Weather API.&quot; Openweathermap. Accessed October 16, 2017. <a href="http://openweathermap.org/api">http://openweathermap.org/api</a>.</li>
+<li>Speaktoit, Inc. &quot;Basics.&quot; Dialogflow. Accessed October 16, 2017. <a href="https://dialogflow.com/docs/getting-started/basics">https://dialogflow.com/docs/getting-started/basics</a>.</li>
+</ul>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#getting-started-with-mesh">Getting Started with MESH</a>
+<ul>
+<li><a href="#what-is-mesh">What is MESH?</a></li>
+<li><a href="#turn-on-your-mesh-tags">Turn on Your MESH Tags</a></li>
+<li><a href="#pair-your-mesh-tags-with-your-mesh-app">Pair Your MESH Tags with Your MESH App</a></li>
+<li><a href="#create-a-connection">Create a Connection</a></li>
+<li><a href="#how-to-use-the-mesh-design-pattern-cards">How to Use the MESH Design Pattern Cards</a></li>
+<li><a href="#lets-make-a-recipe-to-make-fun">Let's Make a Recipe to Make Fun</a></li>
+<li><a href="#what-is-ifttt">What is IFTTT?</a></li>
+<li><a href="#getting-started-with-ifttt">Getting Started with IFTTT</a></li>
+<li><a href="#lets-make-an-applet-to-make-fun">Let's Make an Applet to Make Fun</a></li>
+<li><a href="#what-is-the-gpio-tag">What is the GPIO Tag?</a></li>
+</ul>
+</li>
+<li><a href="#getting-started-with-dialogflow">Getting Started with Dialogflow</a>
+<ul>
+<li><a href="#what-is-dialogflow">What is Dialogflow?</a></li>
+<li><a href="#basic-concepts">Basic concepts</a></li>
+<li><a href="#lets-make-your-first-agent">Let's Make Your First Agent</a>
+<ul>
+<li><a href="#what-you-need">What You Need</a></li>
+<li><a href="#the-first-step">The First Step</a></li>
+<li><a href="#add-conversations-for-small-talk">Add Conversations for Small Talk</a></li>
+<li><a href="#your-first-agent-with-google-assistant">Your First Agent with Google Assistant</a></li>
+</ul>
+</li>
+<li><a href="#lets-connect-your-agent-to-web-services">Let's Connect Your Agent to Web Services</a>
+<ul>
+<li><a href="#preparation">Preparation</a></li>
+<li><a href="#weather">Weather</a></li>
+<li><a href="#ifttt">IFTTT</a></li>
+<li><a href="#what-is-the-bridge-server-anyway">What Is the Bridge Server Anyway?</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
