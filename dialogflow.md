@@ -6,12 +6,6 @@
 - By providing examples of what a user might say when interacting, analyze and understand the user's intent.
 - Can be easily combined with popular touchpoints such as Google Assistant, Slack, and Facebook Messenger.
 
-## Basic concepts
-
-- **Agents** are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.
-- **Intents** are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.
-- **Entities** are powerful tools used for extracting parameter values from natural language inputs.
-
 ## Let's Make Your First Agent
 
 ### What You Need
@@ -38,6 +32,10 @@
 10. Pick a phrase similar to what you gave to `User says`, type in the phrase to `Try it now` field on the upper right of the console and see what happens
 
 Congratulations! You were able to create the first (simple) agent. This agent works on the following system which consists of a local web browser and a web service on the Internet.
+
+> **Agents** are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.
+
+> **Intents** are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.
 
 ```plantuml
 @startuml
@@ -158,6 +156,8 @@ If you forgot your IFTTT key, point your web browser to https://ifttt.com/maker_
 7. Check `Use webhook` for `Fulfillment`, then press `SAVE`
 8. Click on `Integrations` and click on `Google Assistant`, then press `UPDATE DRAFT`
 9. Talk to your Google Assistant and see what happens
+
+> **Entities** are powerful tools used for extracting parameter values from natural language inputs.
 
 ```plantuml
 @startuml
@@ -301,7 +301,44 @@ In the two samples mentioned above, the server that Dialogflow agent was accessi
 
 @import "app.js" {code_block=true}
 
+#### Setup on macOS
+
+1. [Install Node.js and npm](https://nodejs.org/en/download/package-manager/#macos)
+2. Open a Terminal
+3. Execute `npm install` in the same folder as `app.js` to install required packages
+4. Execute `npm start` to start the bridge server
+5. Open another Terminal
+6. [Download ngrok](https://ngrok.com/download), unzip it, then run it like `./ngrok http 8080`
+
+```sh
+$ npm start
+
+> bridge-server@0.0.1 start /Users/mayfair/Documents/development/Hardware-Sketching-Workshop-in-Taipei
+> node app.js
+
+App listening on port 8080
+Press Ctrl+C to quit.
+```
+
+```sh
+./ngrok http 8080
+ngrok by @inconshreveable                                       (Ctrl+C to quit)
+                                                                                
+Session Status                online                                            
+Account                       Shigeru Kobayashi (Plan: Free)                    
+Version                       2.2.8                                             
+Region                        United States (us)                                
+Web Interface                 http://127.0.0.1:4040                             
+Forwarding                    http://a1234567.ngrok.io -> localhost:8080        
+Forwarding                    https://a1234567.ngrok.io -> localhost:8080       
+                                                                                
+Connections                   ttl     opn     rt1     rt5     p50     p90       
+                              0       0       0.00    0.00    0.00    0.00 
+```
+
+In this example, `https://a1234567.ngrok.io` is the address to be specified at the Fulfillment settings.
+
 ## References
 
-- OpenWeatherMap.org. "Weather API." Openweathermap. Accessed October 16, 2017. http://openweathermap.org/api.
+- OpenWeatherMap.org. "Weather API." OpenWeatherMap. Accessed October 16, 2017. http://openweathermap.org/api.
 - Speaktoit, Inc. "Basics." Dialogflow. Accessed October 16, 2017. https://dialogflow.com/docs/getting-started/basics.

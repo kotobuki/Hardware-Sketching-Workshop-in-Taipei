@@ -291,6 +291,7 @@ html pre {
 <p>The MESH Design Pattern Cards is a set of cards to use in the scenes that develop ideas by multiplying problems you found or what you want to<br>
 make and what you can do with MESH.</p>
 <p>On the surface of each card what you can do with MESH is explained and on the back you can see how it is realized. By arranging multiple cards like Input &gt; Output, Input &gt; Processing &gt; Output, you can organize it even if it looks complicated at first glance. If you come up with usages or implementation methods that are not found on standard cards, please fill out blank cards and share them.</p>
+<p><img src="assets/trigger-action-top.png" alt="trigger-action-top"></p>
 <h2 class="mume-header" id="lets-make-a-recipe-to-make-fun">Let's Make a Recipe to Make Fun</h2>
 
 <p>Reference: <a href="https://youtu.be/56IH6XfRHx4">Let's make a cup that talks using MESH</a></p>
@@ -299,6 +300,7 @@ make and what you can do with MESH.</p>
 <li>Make it actually using MESH in 5 minutes</li>
 <li>Present in turns in 3 minutes</li>
 </ol>
+<p><img src="assets/trigger-action-bottom.png" alt="trigger-action-bottom"></p>
 <h2 class="mume-header" id="what-is-ifttt">What is IFTTT?</h2>
 
 <p>To connect things to the network, it is easy to use a web service that freely combines and executes various web services as triggers or actions. A representative example of such a web service is &quot;IFTTT&quot; operated by IFTTT Inc., a web service company in the United States.</p>
@@ -334,13 +336,6 @@ This gray GPIO (General Purpose Input Output) Tag enables you to enjoy wireless 
 <li>By providing examples of what a user might say when interacting, analyze and understand the user's intent.</li>
 <li>Can be easily combined with popular touchpoints such as Google Assistant, Slack, and Facebook Messenger.</li>
 </ul>
-<h2 class="mume-header" id="basic-concepts">Basic concepts</h2>
-
-<ul>
-<li><strong>Agents</strong> are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.</li>
-<li><strong>Intents</strong> are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.</li>
-<li><strong>Entities</strong> are powerful tools used for extracting parameter values from natural language inputs.</li>
-</ul>
 <h2 class="mume-header" id="lets-make-your-first-agent">Let's Make Your First Agent</h2>
 
 <h3 class="mume-header" id="what-you-need">What You Need</h3>
@@ -369,6 +364,12 @@ This gray GPIO (General Purpose Input Output) Tag enables you to enjoy wireless 
 <li>Pick a phrase similar to what you gave to <code>User says</code>, type in the phrase to <code>Try it now</code> field on the upper right of the console and see what happens</li>
 </ol>
 <p>Congratulations! You were able to create the first (simple) agent. This agent works on the following system which consists of a local web browser and a web service on the Internet.</p>
+<blockquote>
+<p><strong>Agents</strong> are best described as NLU (Natural Language Understanding) modules. These can be included in your app, product, or service and transforms natural user requests into actionable data.</p>
+</blockquote>
+<blockquote>
+<p><strong>Intents</strong> are the mechanisms that pick up what your user is requesting and direct the agent to respond accordingly.</p>
+</blockquote>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="242px" preserveAspectRatio="none" style="width:325px;height:242px;" version="1.1" viewBox="0 0 325 242" width="325px" zoomAndPan="magnify"><defs></defs><g><rect fill="#F5F5F5" height="220.86" style="stroke: #A80036; stroke-width: 1.0;" width="149" x="74" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="135" y="14.04">Local</text><rect fill="#F5F5F5" height="220.86" style="stroke: #A80036; stroke-width: 1.0;" width="89" x="225" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="250" y="14.04">Internet</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="96" x2="96" y1="95.14" y2="230.86"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="172" x2="172" y1="95.14" y2="230.86"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="269" x2="269" y1="95.14" y2="230.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="78" y="93.01">Person</text><ellipse cx="96.5" cy="30.21" fill="#FEFECE" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"></ellipse><path d="M96.5,38.21 L96.5,65.21 M83.5,46.21 L109.5,46.21 M96.5,65.21 L83.5,80.21 M96.5,65.21 L109.5,80.21 " fill="#FEFECE" style="stroke: #A80036; stroke-width: 2.0;"></path><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="74" x="135" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="60" x="142" y="85.01">Web Browser</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="239" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="246" y="85.01">Dialogflow</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="170" x2="160" y1="125.14" y2="121.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="170" x2="160" y1="125.14" y2="129.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="171" y1="125.14" y2="125.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="21" x="103.5" y="121.94">'Hi!''</text><polygon fill="#FBFB77" points="8,110.14,8,131.14,92,131.14,92,120.14,82,110.14,8,110.14" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="82" x2="82" y1="110.14" y2="120.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="92" x2="82" y1="120.14" y2="120.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="63" x="14" y="124.94">Type a phrase</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="267.5" x2="257.5" y1="154.07" y2="150.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="267.5" x2="257.5" y1="154.07" y2="158.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="268.5" y1="154.07" y2="154.07"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="179" y="150.87">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="182" y1="180" y2="176"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="182" y1="180" y2="184"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="172" x2="268.5" y1="180" y2="180"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="189" y="176.8">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="106.5" y1="208.93" y2="204.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="106.5" y1="208.93" y2="212.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="96.5" x2="171" y1="208.93" y2="208.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="113.5" y="205.73">'Hello!'</text><polygon fill="#FBFB77" points="177,193.93,177,214.93,285,214.93,285,203.93,275,193.93,177,193.93" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="275" x2="275" y1="193.93" y2="203.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="285" x2="275" y1="203.93" y2="203.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="87" x="183" y="208.73">Show the response</text><!--
 @startuml
 hide footbox
@@ -511,6 +512,9 @@ Country: JP
 <li>Click on <code>Integrations</code> and click on <code>Google Assistant</code>, then press <code>UPDATE DRAFT</code></li>
 <li>Talk to your Google Assistant and see what happens</li>
 </ol>
+<blockquote>
+<p><strong>Entities</strong> are powerful tools used for extracting parameter values from natural language inputs.</p>
+</blockquote>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="426px" preserveAspectRatio="none" style="width:657px;height:426px;" version="1.1" viewBox="0 0 657 426" width="657px" zoomAndPan="magnify"><defs></defs><g><rect fill="#F5F5F5" height="404.65" style="stroke: #A80036; stroke-width: 1.0;" width="193" x="4" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="27" x="87" y="14.04">Local</text><rect fill="#F5F5F5" height="404.65" style="stroke: #A80036; stroke-width: 1.0;" width="445" x="199" y="4"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="402" y="14.04">Internet</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="26" x2="26" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="127" x2="127" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="262" x2="262" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="371" x2="371" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="468" x2="468" y1="95.14" y2="414.65"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="582" x2="582" y1="95.14" y2="414.65"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="31" x="8" y="93.01">Person</text><ellipse cx="26.5" cy="30.21" fill="#FEFECE" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"></ellipse><path d="M26.5,38.21 L26.5,65.21 M13.5,46.21 L39.5,46.21 M26.5,65.21 L13.5,80.21 M26.5,65.21 L39.5,80.21 " fill="#FEFECE" style="stroke: #A80036; stroke-width: 2.0;"></path><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="111" x="72" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="97" x="79" y="85.01">Google Assistant App</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="98" x="213" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="84" x="220" y="85.01">Actions on Google</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="61" x="341" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="47" x="348" y="85.01">Dialogflow</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="432" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="59" x="439" y="85.01">Bridge Server</text><rect fill="#FEFECE" height="25.93" style="stroke: #A80036; stroke-width: 1.5;" width="95" x="535" y="68.21"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="542" y="85.01">OpenWeatherMap</text><rect fill="#EEEEEE" height="3" style="stroke: #EEEEEE; stroke-width: 1.0;" width="642" x="3" y="124.245"></rect><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="645" y1="124.245" y2="124.245"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="3" x2="645" y1="127.245" y2="127.245"></line><rect fill="#EEEEEE" height="20.21" style="stroke: #000000; stroke-width: 2.0;" width="68" x="290" y="115.14"></rect><text fill="#000000" font-family="Helvetica Neue" font-size="10" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="296" y="129.18">Repetition</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="125.5" x2="115.5" y1="162.35" y2="158.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="125.5" x2="115.5" y1="162.35" y2="166.35"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="126.5" y1="162.35" y2="162.35"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="33.5" y="159.15">Say something</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="260" x2="250" y1="188.28" y2="184.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="260" x2="250" y1="188.28" y2="192.28"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="261" y1="188.28" y2="188.28"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="134.5" y="185.08">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="369.5" x2="359.5" y1="214.21" y2="210.21"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="369.5" x2="359.5" y1="214.21" y2="218.21"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="370.5" y1="214.21" y2="214.21"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="269" y="211.01">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="466.5" x2="456.5" y1="240.14" y2="236.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="466.5" x2="456.5" y1="240.14" y2="244.14"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="467.5" y1="240.14" y2="240.14"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="378.5" y="236.94">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="580.5" x2="570.5" y1="266.07" y2="262.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="580.5" x2="570.5" y1="266.07" y2="270.07"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="581.5" y1="266.07" y2="266.07"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="37" x="475.5" y="262.87">Request</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="478.5" y1="292" y2="288"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="478.5" y1="292" y2="296"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="468.5" x2="581.5" y1="292" y2="292"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="485.5" y="288.8">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="381.5" y1="317.93" y2="313.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="381.5" y1="317.93" y2="321.93"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="371.5" x2="467.5" y1="317.93" y2="317.93"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="388.5" y="314.73">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="272" y1="343.86" y2="339.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="272" y1="343.86" y2="347.86"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="262" x2="370.5" y1="343.86" y2="343.86"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="279" y="340.66">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="137.5" y1="369.79" y2="365.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="137.5" y1="369.79" y2="373.79"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="127.5" x2="261" y1="369.79" y2="369.79"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="144.5" y="366.59">Response</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="395.72" y2="391.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="36.5" y1="395.72" y2="399.72"></line><line style="stroke: #A80036; stroke-width: 1.0;" x1="26.5" x2="126.5" y1="395.72" y2="395.72"></line><text fill="#000000" font-family="Helvetica Neue" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="77" x="43.5" y="392.52">Say the response</text><!--
 @startuml
 hide footbox
@@ -786,10 +790,43 @@ app<span class="token punctuation">.</span><span class="token function">listen</
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Press Ctrl+C to quit.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </pre>
+<h4 class="mume-header" id="setup-on-macos">Setup on macOS</h4>
+
+<ol>
+<li><a href="https://nodejs.org/en/download/package-manager/#macos">Install Node.js and npm</a></li>
+<li>Open a Terminal</li>
+<li>Execute <code>npm install</code> in the same folder as <code>app.js</code> to install required packages</li>
+<li>Execute <code>npm start</code> to start the bridge server</li>
+<li>Open another Terminal</li>
+<li><a href="https://ngrok.com/download">Download ngrok</a>, unzip it, then run it like <code>./ngrok http 8080</code></li>
+</ol>
+<pre class="language-sh">$ <span class="token function">npm</span> start
+
+<span class="token operator">></span> bridge-server@0.0.1 start /Users/mayfair/Documents/development/Hardware-Sketching-Workshop-in-Taipei
+<span class="token operator">></span> node app.js
+
+App listening on port 8080
+Press Ctrl+C to quit.
+</pre>
+<pre class="language-sh">./ngrok http 8080
+ngrok by @inconshreveable                                       <span class="token punctuation">(</span>Ctrl+C to quit<span class="token punctuation">)</span>
+                                                                                
+Session Status                online                                            
+Account                       Shigeru Kobayashi <span class="token punctuation">(</span>Plan: Free<span class="token punctuation">)</span>                    
+Version                       2.2.8                                             
+Region                        United States <span class="token punctuation">(</span>us<span class="token punctuation">)</span>                                
+Web Interface                 http://127.0.0.1:4040                             
+Forwarding                    http://a1234567.ngrok.io -<span class="token operator">></span> localhost:8080        
+Forwarding                    https://a1234567.ngrok.io -<span class="token operator">></span> localhost:8080       
+                                                                                
+Connections                   ttl     opn     rt1     rt5     p50     p90       
+                              0       0       0.00    0.00    0.00    0.00 
+</pre>
+<p>In this example, <code>https://a1234567.ngrok.io</code> is the address to be specified at the Fulfillment settings.</p>
 <h2 class="mume-header" id="references">References</h2>
 
 <ul>
-<li><a href="http://OpenWeatherMap.org">OpenWeatherMap.org</a>. &quot;Weather API.&quot; Openweathermap. Accessed October 16, 2017. <a href="http://openweathermap.org/api">http://openweathermap.org/api</a>.</li>
+<li><a href="http://OpenWeatherMap.org">OpenWeatherMap.org</a>. &quot;Weather API.&quot; OpenWeatherMap. Accessed October 16, 2017. <a href="http://openweathermap.org/api">http://openweathermap.org/api</a>.</li>
 <li>Speaktoit, Inc. &quot;Basics.&quot; Dialogflow. Accessed October 16, 2017. <a href="https://dialogflow.com/docs/getting-started/basics">https://dialogflow.com/docs/getting-started/basics</a>.</li>
 </ul>
 
@@ -812,7 +849,6 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <li><a href="#getting-started-with-dialogflow">Getting Started with Dialogflow</a>
 <ul>
 <li><a href="#what-is-dialogflow">What is Dialogflow?</a></li>
-<li><a href="#basic-concepts">Basic concepts</a></li>
 <li><a href="#lets-make-your-first-agent">Let's Make Your First Agent</a>
 <ul>
 <li><a href="#what-you-need">What You Need</a></li>
@@ -826,7 +862,11 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <li><a href="#preparation">Preparation</a></li>
 <li><a href="#weather">Weather</a></li>
 <li><a href="#ifttt">IFTTT</a></li>
-<li><a href="#what-is-the-bridge-server-anyway">What Is the Bridge Server Anyway?</a></li>
+<li><a href="#what-is-the-bridge-server-anyway">What Is the Bridge Server Anyway?</a>
+<ul>
+<li><a href="#setup-on-macos">Setup on macOS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#references">References</a></li>

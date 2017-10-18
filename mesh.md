@@ -46,6 +46,8 @@ make and what you can do with MESH.
 
 On the surface of each card what you can do with MESH is explained and on the back you can see how it is realized. By arranging multiple cards like Input > Output, Input > Processing > Output, you can organize it even if it looks complicated at first glance. If you come up with usages or implementation methods that are not found on standard cards, please fill out blank cards and share them.
 
+![trigger-action-top](/assets/trigger-action-top.png)
+
 ## Let's Make a Recipe to Make Fun
 
 Reference: [Let's make a cup that talks using MESH](https://youtu.be/56IH6XfRHx4)
@@ -53,6 +55,8 @@ Reference: [Let's make a cup that talks using MESH](https://youtu.be/56IH6XfRHx4
 1. Think about when and what to do in 2 minutes
 2. Make it actually using MESH in 5 minutes
 3. Present in turns in 3 minutes
+
+![trigger-action-bottom](/assets/trigger-action-bottom.png)
 
 ## What is IFTTT?
 
