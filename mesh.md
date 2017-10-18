@@ -19,6 +19,12 @@ With MESH, you can:
 - Connect to various wireless devices (i.e. Philips Hue and Olympus Air)
 - Control functions on your iPhone, iPad or iPod touch (e.g. camera, speaker, microphone and notification)
 
+## What You Need
+
+- MESH Tags: 1 set
+- MESH Design Pattern Cards: 1 set
+- iPad: 1
+
 ## Turn on Your MESH Tags
 
 The power button is located underneath the icon. If nothing when you press the icon, the power is off. To turn on your MESH Tag, press and hold the icon for two seconds. A white light will appear once your Tag is turned on (if the light does not appear, the MESH Tag has run out of battery). To turn off your MESH Tag, press and hold the icon again for two seconds.
@@ -47,6 +53,11 @@ make and what you can do with MESH.
 On the surface of each card what you can do with MESH is explained and on the back you can see how it is realized. By arranging multiple cards like Input > Output, Input > Processing > Output, you can organize it even if it looks complicated at first glance. If you come up with usages or implementation methods that are not found on standard cards, please fill out blank cards and share them.
 
 ![trigger-action-top](/assets/trigger-action-top.png)
+
+### Downloads
+
+- [Cards](http://support.meshprj.com/hc/ja/article_attachments/115002103234/MESH_design_pattern_cards_English.pdf)
+- [Tabs](http://support.meshprj.com/hc/ja/article_attachments/115002100713/MESH_design_pattern_cards_tab_English.pdf)
 
 ## Let's Make a Recipe to Make Fun
 
