@@ -41,7 +41,7 @@ Congratulations! You were able to create the first (simple) agent. This agent wo
 @startuml
 hide footbox
 skinparam defaultFontName Helvetica Neue
-skinparam DefaultFontSize 10
+'skinparam DefaultFontSize 10
 skinparam Shadowing false
 skinparam ParticipantPadding 10
 
@@ -62,6 +62,12 @@ Browser ->> Person : 'Hello!'
 note right: Show the response
 @enduml
 ```
+
+#### Note
+
+Until recently Dialogflow was named API.AI. If the following message appears at the top of the screen, please press "DISMISS" and close it.
+
+![dismiss](/assets/dismiss.png)
 
 ### Add Conversations for Small Talk
 
@@ -133,17 +139,31 @@ note left: Say the response
 @enduml
 ```
 
+#### Trouble Shooting
+
+If an error message like the one shown below appears, click the icon in the upper right of the screen to verify that it is the same as the Google account you are using with Dialogflow. If it is different, you need to select the account.
+
+![error-visiting-console](/assets/error-visiting-console.png)
+
+If you see an error message about the Google Account activity settings from the simulator, please visit https://myaccount.google.com/activitycontrols in your web browser and refer to the screenshots below to set them up.
+
+![activity-settings-1](/assets/activity-settings-1.png)
+
+![activity-settings-2](/assets/activity-settings-2.png)
+
 ## Let's Connect Your Agent to Web Services
 
 ### Preparation
 
 1. Click on `Fulfillment` in the left navigation on the Dialogflow page
 2. Click on `DISABLED` next to `Webhook` toggle to enable webhook
-3. Enter the URL of the workshop server (e.g. https://xxxxxxxx.ngrok.io) to the `URL` field
-4. Enter a pair of a key and a value, `keys` and to the `HEADERS` field; `keys` and `{"ifttt":"*********************","openweathermap":"********************************"}`
+3. Enter the URL of the workshop server (e.g. https://xxxxxxxx.ngrok.io) to the `URL` field (can be found in the Dropbox folder as `server.txt`)
+4. Enter a pair of a key and a value, `keys` and to the `HEADERS` field; `keys` (not `key`) and `{"ifttt":"*********************","openweathermap":"********************************"}` (can be found in the Dropbox folder as `keys.txt`)
 5. Press `SAVE` to save settings
 
 If you forgot your IFTTT key, point your web browser to https://ifttt.com/maker_webhooks, then click on `Documentation` to see your key.
+
+![setting-webhook](/assets/setting-webhook.png)
 
 ### Weather
 
@@ -253,6 +273,10 @@ The following is an example of a webhook sent from Dialogflow.
 11. Create a recipe on the MESH app on your iPad to connect a IFTTT tag to a LED tag
 12. Talk to your Google Assistant and see what happens
 
+![mesh-settings-ifttt-receive](/assets/mesh-settings-ifttt-receive.png)
+
+![mesh-settings-recipe](/assets/mesh-settings-recipe.png)
+
 ```plantuml
 @startuml
 hide footbox
@@ -286,7 +310,7 @@ Dialogflow ->> AoG : Response
 AoG ->> App : Response
 App ->> Person : 'Sure!'
 ... up to a few minutes ...
-IFTTT ->> IFTTT : Execute applets
+IFTTT ->> IFTTT : Execute the applet
 activate IFTTT
 IFTTT ->> MeshApp : Request
 deactivate IFTTT
@@ -295,7 +319,9 @@ LedTag ->> Person: Light
 @enduml
 ```
 
-### What Is the Bridge Server Anyway?
+## Advanced Topics
+
+### The Bridge Server
 
 In the two samples mentioned above, the server that Dialogflow agent was accessing to execute fullfillment is implemented in JavsScript and Node.js. If you want to adapt to actions other than `weather` and `ifttt`, you need to modify and extend the code.
 

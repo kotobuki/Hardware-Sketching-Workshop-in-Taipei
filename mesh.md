@@ -81,6 +81,37 @@ In addition to various web services including Twitter, Facebook, and Instagram, 
 2. Install an application for your iOS or Android device
 3. Create a recipe to get familiar with IFTTT terms (e.g. applets, services, triggers, actions and so on)
 
+```plantuml
+@startuml
+hide footbox
+skinparam defaultFontName Helvetica Neue
+'skinparam DefaultFontSize 10
+skinparam Shadowing false
+skinparam ParticipantPadding 10
+
+box "Local" #WhiteSmoke
+actor Person
+participant "Button Tag" as ButtonTag
+participant "MESH App" as MeshApp
+participant "IFTTT App" as IftttApp
+end box
+
+box "Internet" #WhiteSmoke
+participant "IFTTT" as IFTTT
+end box
+
+Person ->> ButtonTag : Press
+ButtonTag ->> MeshApp : Notification
+MeshApp ->> IFTTT : Request
+... up to a few minutes ...
+IFTTT ->> IFTTT : Execute the applet
+activate IFTTT
+IFTTT ->> IftttApp : Request
+deactivate IFTTT
+IftttApp ->> Person: Notification
+@enduml
+```
+
 ## Let's Make an Applet to Make Fun
 
 1. Think about when and what to do in 2 minutes
